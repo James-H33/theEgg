@@ -1,0 +1,194 @@
+@import 'sass/1-base/vars'
+
+*
+  font-family: monospace
+  padding: 0
+  margin: 0
+
+ul
+  list-style: none
+
+.button
+  width: 32px
+  height: 25px
+  position: fixed
+  top: 20px
+  left: 20px
+  z-index: 1000
+  cursor: pointer
+
+  &:hover
+
+    span:nth-child(2)
+      width: 25px
+    span:nth-child(3)
+      width: 25px
+
+  span
+    width: 25px
+    height: 2px
+    background: $blue
+    position: absolute
+    left: 2px
+
+  span:nth-child(1)
+    width: 25px
+    top: 3px
+    transform: rotate(0deg)
+  span:nth-child(2)
+    width: 18px
+    top: 9px
+    transition: all 0.35s linear
+  span:nth-child(3)
+    width: 9px
+    top: 15px
+    transform: rotate(0deg)
+    transition: all 0.35s linear
+
+  span:nth-child(1).sChange
+    width: 25px
+    top: 9px
+    background: $light
+    transform: rotate(-135deg)
+    transition: all 0.35s linear
+  span:nth-child(2).sChange
+    width: 0px
+    top: 9px
+    background: $light
+    transition: all 0.35s linear
+  span:nth-child(3).sChange
+    width: 25px
+    top: 9px
+    background: $light
+    transform: rotate(135deg)
+    transition: all 0.35s linear
+
+.nav-wrapper
+  width: 300px
+  height: 100vh
+  background: $blue
+  position: fixed
+  z-index: 100
+  transform: translateX(-300px)
+  transition: all .35s ease
+
+.nav-display
+  width: 100%
+  height: 100%
+  color: $light
+  margin-left: 40px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  li
+    color: $light
+    font-size: 20px
+    list-style: none
+    padding: 10px
+    letter-spacing: 0.6px
+    transform: translateX(-50px)
+    transition: all 0.35s ease 0.3s
+
+  h1
+    font-size: 30px
+    transform: translateX(-50px)
+    transition: all 0.35s ease 0.3s
+
+.slideNav
+  box-shadow: 3px 0px 10px black
+  transform: translateX(0)
+
+  li,h1
+    transform: translateX(0)
+
+
+
+.intro-wrapper
+  width: 100%
+  height: 100vh
+  overflow-y: hidden
+  background:
+    image: url('http://d1udmfvw0p7cd2.cloudfront.net/wp-content/uploads/2015/08/p10-jiji-white-eggs-a-20150829.jpg')
+    size: cover
+    repeat: no-repeat
+
+.intro-display
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  h1
+    color: $blue
+    font-size: 40px
+    position: relative
+
+    &:after
+      content: ''
+      display: block
+      border-bottom: 2px solid $blue
+      position: absolute
+      left: 0
+      width: 0
+      transition: all 0.35s linear
+
+    &:hover:after
+      width: 100%
+
+.items-wrapper
+  width: 100%
+  height: 100%
+
+.items-display
+  width: 100%
+  height: 100%
+  max-width: 900px
+  margin: 0 auto
+  padding: 80px 0
+
+  ul
+    text-align: center
+
+  li
+    width: 300px
+    height: 100%
+    color: $blue
+    font-size: 20px
+    padding: 30px 0
+    opacity: 0
+    display: inline-block
+    transform: translateX(200px)
+    transition: all 0.5s ease
+
+    &.slideFigures
+      opacity: 1
+      transform: translateX(0)
+
+  img
+    width: 100%
+    height: 100%
+
+  button
+    width: 120px
+    height: 40px
+    font-size: 16px
+    color: $light
+    background: $blue
+    outline: none
+    border: none
+    border-radius: 4px
+    box-shadow: 0px 5px 10px #252525
+    cursor: pointer
+    transform: translateY(5px)
+    transition: all 0.8s ease
+
+    &:hover
+      box-shadow: 0px 0px 10px #252525
+      transform: translateY(0)
+
+.about-wrapper
+  width: 100%
+  height: 100%
+  background: $blue
