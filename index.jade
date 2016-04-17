@@ -12,32 +12,53 @@ html
       span
       span
       span
+      
     section.nav-wrapper
       div.nav-display
         h1 The Egg
         li Small
         li Medium
         li Large
+        
     section.intro-wrapper
       div.intro-display
         h1 WHAT THE EGG?
         p Find your perfect egg today.
         button Start Now
+        
     section.items-wrapper
       div.items-display
         ul
           li Small Egg
             img(src="assets/imgs/egg-picture-crop.png")
+            h4 $1.99
             button View Egg
           li Medium Egg
             img(src="assets/imgs/egg-picture-crop.png")
+            h4 $2.99
             button View Egg
           li Large Egg
             img(src="assets/imgs/egg-picture-crop.png")
+            h4 $3.99
             button View Egg
+            
     section.about-wrapper
       div.about-display
-        h1 Eggs that fit your budget
+        h1 Eggs that fit <span>Your Budget!</span>
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            
+        
+    section.form-wrapper
+      div.form-display
+        h1 Join Today
+        div.form-group
+          input(type="text", required)
+          label.signUpLabel Name
+        div.form-group
+          input(type="email", required)
+          label.signUpLabel Email
+        div.form-group
+          input(type="password", required)
+          label.signUpLabel Password
+        button Submit
+        
     

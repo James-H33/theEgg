@@ -8,6 +8,13 @@
 ul
   list-style: none
 
+
+
+
+//*****************************************
+//           NAV SECTION
+//*****************************************
+
 .button
   width: 32px
   height: 25px
@@ -104,6 +111,11 @@ ul
 
 
 
+
+//*****************************************
+//           INTRO SECTION
+//*****************************************
+
 .intro-wrapper
   width: 100%
   height: 100vh
@@ -163,6 +175,9 @@ ul
 
 
 
+//*****************************************
+//           ITEMS SECTION
+//*****************************************
 
 .items-wrapper
   width: 100%
@@ -216,13 +231,39 @@ ul
       box-shadow: 0px 0px 10px #252525
       transform: translateY(0)
 
+
+
+
+//*****************************************
+//           ABOUT SECTION
+//*****************************************
+
 .about-wrapper
   width: 100%
   height: 100%
-  background: $blue
+  background: linear-gradient($light-blue, $blue)
+  position: relative
+  opacity: 0
+  transform: translateY(200px)
+  transition: all 0.5s ease
+
+  &.aboutUp
+    transform: translateY(0)
+    opacity: 1
+
+  &:after
+    display: block
+    content: ''
+    border: 2em solid transparent
+    border-top-color: $blue
+    position: absolute
+    margin-left: -2em
+    top: 100%
+    left: 50%
+
 
 .about-display
-  width: 100%
+  width: 95%
   height: 100%
   max-width: 900px
   margin: 0 auto
@@ -230,12 +271,103 @@ ul
   color: $light
   text-align: center
 
+
   h1
     font-weight: normal
     font-size: 25px
     margin-bottom: 40px
 
+    span
+      font-size: 28px
+      font-weight: bold
+      color: #fff
+      text-decoration: underline
+
   p
     font-size: 16px
     letter-spacing: 0.6px
     line-height: 30px
+
+
+
+//*****************************************
+//           FORM SECTION
+//*****************************************
+
+.form-wrapper
+  width: 100%
+  height: 100%
+  background: $light
+
+.form-display
+  width: 95%
+  height: 100%
+  max-width: 300px
+  margin: 0 auto
+  padding: 80px 0
+  text-align: center
+
+  h1
+    font-size: 30px
+    color: $blue
+    padding: 40px 0
+
+  button
+    width: 120px
+    height: 35px
+    color: $light
+    font-size: 20px
+    background: $blue
+    outline: none
+    border: none
+    cursor: pointer
+    box-shadow: 0px 5px 10px #252525
+    transform: translateY(5px)
+    transition: all 0.8s ease
+
+    &:hover
+      transform: translateY(0)
+
+.form-group
+  width: 95%
+  height: 100%
+  position: relative
+  padding: 10px 0
+
+  label
+    color: rgba(0, 0, 0, 0.4)
+    font-size: 20px
+    letter-spacing: 0.6px
+    position: absolute
+    top: 8px
+    left: 5px
+    z-index: 100
+    transition: all 0.5s ease
+
+  input
+    width: 300px
+    height: 50px
+    color: $blue
+    font-size: 25px
+    background: $light
+    margin-bottom: 20px
+    outline: none
+    border: none
+    border-bottom: 2px solid $blue
+    transition: all 0.5s ease
+
+    &:focus
+
+      &+label
+        color: $blue
+        top: 0
+        font-size: 16px
+        font-weight: bold
+
+    &:valid
+
+      &+label
+        color: $blue
+        top: 0
+        font-size: 16px
+        font-weight: bold
